@@ -52,7 +52,7 @@ server "10.0.1.127", user: "deploy", roles: %w(app web db)
 # --------------
 set :ssh_options, {
 	keys: %w(~/.ssh/id_rsa),
-	forward_agent: true,
+	forward_agent: false,
 	auth_methods: %w(publickey)
 }
 #
