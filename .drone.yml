@@ -9,12 +9,14 @@ deploy:
       branch: develop
     commands:
       - echo "DEVELOP"
+      - cat ~/.ssh/id_rsa
   capistrano:
     image: framgia/drone-plugin-ssh-ruby
     when:
       branch: master
     commands:
       - echo "MASTER"
+      - cat ~/.ssh/id_rsa
 cache:
   mount:
     - .git
