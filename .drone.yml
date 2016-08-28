@@ -16,7 +16,7 @@ deploy:
       branch: master
     commands:
       - echo "MASTER"
-      - cat ~/.ssh/id_rsa
+      - cap staging deploy:check
 cache:
   mount:
     - .git
