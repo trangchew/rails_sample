@@ -1,3 +1,12 @@
+set :stage, "production"
+#ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+#set :linked_files, fetch(:linked_files, [])
+#  .push("config/settings/staging_framgia.yml")
+#set :linked_dirs, fetch(:linked_dirs, [])
+#  .push("public/uploads")
+
+server "10.0.1.127", user: "deploy", roles: %w(app web db)
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
@@ -41,11 +50,11 @@
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+set :ssh_options, {
+	keys: %w(~/.ssh/id_rsa),
+	forward_agent: true,
+	auth_methods: %w(publickey)
+}
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------

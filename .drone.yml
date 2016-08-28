@@ -16,7 +16,7 @@ deploy:
       branch: master
     commands:
       - echo "MASTER"
-      - cap staging deploy:check
+      - cap production deploy:check
 cache:
   mount:
     - .git
