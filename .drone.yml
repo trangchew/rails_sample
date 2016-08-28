@@ -1,7 +1,6 @@
 build:
   image: ruby
   commands:
-    - bundle package
     - bundle
 deploy:
   capistrano:
