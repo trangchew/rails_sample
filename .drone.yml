@@ -2,6 +2,7 @@ build:
   image: ruby
   commands:
     - bundle package
+    - bundle
 deploy:
   capistrano:
     image: framgia/drone-plugin-ssh-ruby
