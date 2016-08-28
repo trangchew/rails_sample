@@ -1,0 +1,21 @@
+build:
+  image: ruby
+  commands:
+    - bundle package
+deploy:
+  capistrano:
+    image: framgia/drone-plugin-ssh-ruby
+    when:
+      branch: develop
+    commands:
+      - echo "DEVELOP"
+  capistrano:
+    image: framgia/drone-plugin-ssh-ruby
+    when:
+      branch: master
+    commands:
+      - echo "MASTER"
+cache:
+  mount:
+    - .git
+    - vendor/cache
