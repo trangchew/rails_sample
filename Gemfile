@@ -54,3 +54,5 @@ gem "capistrano-rvm"
 gem "capistrano-sidekiq"
 gem "capistrano-bundler"
 gem "capistrano3-unicorn"
+gem 'capistrano-locally'
+
