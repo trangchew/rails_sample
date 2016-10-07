@@ -1,20 +1,8 @@
-deploy:
-  capistrano:
-    image: framgia/drone-plugin-ssh-ruby
-    when:
-      branch: develop
-    commands:
-      - bundle
-      - echo "DEVELOP"
-  capistrano:
-    image: framgia/drone-plugin-ssh-ruby
-    when:
-      branch: master
-    commands:
-      - echo "MASTER"
-      - bundle
-      - cap production deploy:check
-cache:
-  mount:
-    - .git
-    - vendor/cache
+image: ruby:2.3.1
+script:
+  - bundle install
+  - rspec spec/
+notify:
+  email:
+    recipients:
+      - le.dinh.vu@framgia.com
