@@ -1,7 +1,8 @@
-image: ruby:2.3.1
-script:
-  - bundle install
-  - rspec spec/
+build:
+  image: ruby:2.3.1
+  commands:
+    - bundle install
+    - rspec spec/
 notify:
   email:
     recipients:
