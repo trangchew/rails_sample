@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-	let(:post) { Post.new }
+  let(:post) { Post.new }
 
-	subject { post }
+  subject { post }
 
-	it { should be_valid }
+  it { should be_valid }
 end

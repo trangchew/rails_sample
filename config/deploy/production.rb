@@ -1,11 +1,11 @@
-set :stage, "production"
-#ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-#set :linked_files, fetch(:linked_files, [])
+set :stage, 'production'
+# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+# set :linked_files, fetch(:linked_files, [])
 #  .push("config/settings/staging_framgia.yml")
-#set :linked_dirs, fetch(:linked_dirs, [])
+# set :linked_dirs, fetch(:linked_dirs, [])
 #  .push("public/uploads")
 
-server "10.0.1.127", user: "deploy", roles: %w(app web db)
+server '10.0.1.127', user: 'deploy', roles: %w(app web db)
 
 # server-based syntax
 # ======================
@@ -15,8 +15,6 @@ server "10.0.1.127", user: "deploy", roles: %w(app web db)
 # server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
-
-
 
 # role-based syntax
 # ==================
@@ -30,8 +28,6 @@ server "10.0.1.127", user: "deploy", roles: %w(app web db)
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-
-
 # Configuration
 # =============
 # You can set any configuration variable like in config/deploy.rb
@@ -39,8 +35,6 @@ server "10.0.1.127", user: "deploy", roles: %w(app web db)
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-
-
 
 # Custom SSH Options
 # ==================
@@ -50,11 +44,9 @@ server "10.0.1.127", user: "deploy", roles: %w(app web db)
 #
 # Global options
 # --------------
-set :ssh_options, {
-	keys: %w(~/.ssh/id_rsa),
-	forward_agent: false,
-	auth_methods: %w(publickey)
-}
+set :ssh_options,    keys: %w(~/.ssh/id_rsa),
+                     forward_agent: false,
+                     auth_methods: %w(publickey)
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------

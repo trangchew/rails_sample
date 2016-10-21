@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7.1'
 # Use sqlite3 as the database for Active Record
@@ -18,7 +17,12 @@ gem 'sqlite3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-	 gem "rspec-rails"
+  gem 'rspec-rails'
+
+  gem 'brakeman', require: false
+  gem 'jshint'
+  gem 'bundler-audit'
+  gem 'rubocop', require: false
 end
 
 group :development do
@@ -30,14 +34,12 @@ group :development do
 end
 
 # deploy
-gem "unicorn"
-gem "unicorn-worker-killer"
-gem "capistrano", "3.6.0"
-gem "capistrano-rails"
-gem "capistrano-rvm"
-gem "capistrano-sidekiq"
-gem "capistrano-bundler"
-gem "capistrano3-unicorn"
-#gem 'capistrano-locally'
-
-
+gem 'unicorn'
+gem 'unicorn-worker-killer'
+gem 'capistrano', '3.6.0'
+gem 'capistrano-rails'
+gem 'capistrano-rvm'
+gem 'capistrano-sidekiq'
+gem 'capistrano-bundler'
+gem 'capistrano3-unicorn'
+# gem 'capistrano-locally'
