@@ -1,9 +1,17 @@
 build:
   image: ruby:2.3.1
   commands:
+    - bundle package
     - bundle install
     - rspec spec/
+    - bundle-audit --update
+    - brakeman
+    - rubocop
+    - rake jshint
 notify:
   email:
     recipients:
       - le.dinh.vu@framgia.com
+cache:
+  mount:
+    - vendor/cache
