@@ -23,6 +23,8 @@ group :development, :test do
   gem 'jshint'
   gem 'bundler-audit'
   gem 'rubocop', require: false
+	gem 'scss_lint', require: false
+	gem 'eslint-rails'
 end
 
 group :development do

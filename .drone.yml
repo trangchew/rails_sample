@@ -5,8 +5,10 @@ build:
     - rspec spec/
     - bundle-audit --update
     - brakeman
-    - rubocop
+    - rubocop app/ lib/
     - rake jshint
+    - scss-lint app/assets/stylesheets/
+    - rake eslint:run_all app/
 notify:
   email:
     recipients:
