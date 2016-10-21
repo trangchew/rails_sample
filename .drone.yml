@@ -1,7 +1,7 @@
 build:
   image: ruby:2.3.1
   commands:
-    - bundle install
+    - bundle install --path=bundler
     - rspec spec/
     - bundle-audit --update
     - brakeman
@@ -13,4 +13,4 @@ notify:
       - le.dinh.vu@framgia.com
 cache:
   mount:
-    - vendor/cache
+    - bundler 
