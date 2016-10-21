@@ -15,4 +15,4 @@ notify:
       - le.dinh.vu@framgia.com
 cache:
   mount:
-    - bundler 
+    - .bundle
