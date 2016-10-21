@@ -25,6 +25,7 @@ group :development, :test do
   gem 'rubocop', require: false
 	gem 'scss_lint', require: false
 	gem 'eslint-rails'
+	gem "rails_best_practices"
 end
 
 group :development do

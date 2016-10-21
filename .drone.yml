@@ -9,6 +9,7 @@ build:
     - rake jshint
     - scss-lint app/assets/stylesheets/
     - rake eslint:run_all app/
+    - rails_best_practices app/
 notify:
   email:
     recipients:
