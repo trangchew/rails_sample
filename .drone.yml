@@ -2,14 +2,14 @@ build:
   image: ruby:2.3.1
   commands:
     - bundle install --path=/drone/.bundle
-    #- rspec spec/
-    #- bundle-audit --update
-    #- brakeman
-    #- rubocop app/ lib/
-    #- rake jshint
-    #- scss-lint app/assets/stylesheets/
-    #- rake eslint:run_all app/
-    #- rails_best_practices app/
+    - rspec spec/
+    - bundle-audit --update
+    - brakeman
+    - rubocop app/ lib/
+    - rake jshint
+    - scss-lint app/assets/stylesheets/
+    - rake eslint:run_all app/
+    - rails_best_practices app/
 notify:
   email:
     recipients:
