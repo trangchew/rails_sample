@@ -1,7 +1,7 @@
 build:
   image: ruby:2.3.1
   commands:
-    - bundle install --path=bundler
+    - bundle install --path=/drone/.bundle
     - rspec spec/
     - bundle-audit --update
     - brakeman
@@ -17,5 +17,4 @@ notify:
 cache:
   mount:
     - .git
-    - .bundle
-    - bundler
+    - /drone/.bundle
