@@ -4,8 +4,9 @@ build:
     - bundle install --path=/drone/.bundle
     - rspec spec/
     - bundle-audit --update
-    - brakeman
-    - rubocop app/ lib/
+    - brakeman -o tmp/output.html -o tmp/output.json
+    - reek --format html > tmp/reek.html
+    - bundle exec rubocop --require rubocop/formatter/checkstyle_formatter --format RuboCop::Formatter::CheckstyleFormatter --no-color --rails --out tmp/checkstyle.xml app/ lib/
     - rake jshint
     - scss-lint app/assets/stylesheets/
     - rake eslint:run_all app/
