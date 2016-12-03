@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.7.1'
+gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
@@ -23,9 +23,12 @@ group :development, :test do
   gem 'jshint'
   gem 'bundler-audit'
   gem 'rubocop', require: false
+	gem 'rubocop-checkstyle_formatter', require: false
 	gem 'scss_lint', require: false
 	gem 'eslint-rails'
 	gem "rails_best_practices"
+	gem 'reek'
+	gem 'bundler-audit'
 end
 
 group :development do
