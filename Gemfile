@@ -29,6 +29,10 @@ group :development, :test do
 	gem "rails_best_practices"
 	gem 'reek'
 	gem 'bundler-audit'
+
+	gem 'simplecov'
+	gem 'simplecov-rcov'
+  gem "simplecov-json"
 end
 
 group :development do
