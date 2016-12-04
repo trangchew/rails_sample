@@ -23,15 +23,15 @@ group :development, :test do
   gem 'jshint'
   gem 'bundler-audit'
   gem 'rubocop', require: false
-	gem 'rubocop-checkstyle_formatter', require: false
-	gem 'scss_lint', require: false
-	gem 'eslint-rails'
-	gem "rails_best_practices"
-	gem 'reek'
-	gem 'bundler-audit'
+  gem 'rubocop-checkstyle_formatter', require: false
+  gem 'scss_lint', require: false
+  gem 'scss_lint_reporter_checkstyle'
+  gem 'eslint-rails'
+  gem "rails_best_practices"
+  gem 'reek'
 
-	gem 'simplecov'
-	gem 'simplecov-rcov'
+  gem 'simplecov'
+  gem 'simplecov-rcov'
   gem "simplecov-json"
 end
 

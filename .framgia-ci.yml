@@ -1,0 +1,34 @@
+test:
+  bundle-audit:
+    enable: true
+    ignore: true
+    command: bundle-audit --update
+  rspec:
+    enable: true
+    ignore: true
+    command: rspec --format html --out reports/rspec.html spec/
+  brakeman:
+    enable: true
+    ignore: true
+    command: brakeman -o reports/brakeman.html -o reports/brakeman.json
+  reek:
+    enable: true
+    ignore: true
+    command: reek --format html > reports/reek.html
+  rubocop:
+    enable: true
+    ignore: true
+    command: bundle exec rubocop --require rubocop/formatter/checkstyle_formatter --format RuboCop::Formatter::CheckstyleFormatter --no-color --rails --out reports/rubocop.xml app/ lib/
+  scss-lint:
+    enable: true
+    ignore: true
+    command: scss-lint --require=scss_lint_reporter_checkstyle --format=Checkstyle --out=reports/scss-lint.xml app/assets/stylesheets/
+  eslint:
+    enable: true
+    ignore: true
+    command: rake eslint:run_all --format=checkstyle --output-file=reports/eslint.xml app/
+  rails_best_practices:
+    enable: true
+    ignore: true
+    command: rails_best_practices --format html --output-file reports/rails_best_practices.html app/
+
