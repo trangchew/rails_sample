@@ -3,7 +3,7 @@ test:
   bundle-audit:
     enable: true
     ignore: true
-    command: bundle-audit --update
+    command: bundle-audit --update | tee reports/bundle-audit.txt
   rspec:
     enable: true
     ignore: true
