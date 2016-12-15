@@ -10,3 +10,4 @@ cache:
   mount:
     - .git
     - /drone/.bundle
+
