@@ -2,10 +2,7 @@ build:
   #image: framgia/ruby-workspace-ci
   image: octoberstorm/rubycap
   commands:
-    - /bin/bash -c "source /etc/profile.d/rvm.sh"
-    - /bin/bash -c "bundle install"
-    - /bin/bash -c "RAILS_ENV=test rake db:create db:migrate"
-    - /bin/bash -c "framgia-ci run"
+    - /bin/bash -c "source /etc/profile.d/rvm.sh && bundle install && RAILS_ENV=test rake db:create db:migrate && framgia-ci run"
 cache:
   mount:
     - .git
