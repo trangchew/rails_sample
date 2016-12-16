@@ -3,12 +3,11 @@ build:
   image: octoberstorm/rubycap
   commands:
     - curl -o /usr/bin/framgia-ci https://raw.githubusercontent.com/framgia/ci-report-tool/master/dist/framgia-ci && chmod +x /usr/bin/framgia-ci
-    - bundle install --path=/drone/.bundle
+    - bundle install
     - framgia-ci test
     - framgia-ci report
     - framgia-ci finish
 cache:
   mount:
     - .git
-    - /drone/.bundle
 
