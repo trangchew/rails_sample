@@ -2,11 +2,10 @@ build:
   #image: framgia/ruby-workspace-ci
   image: octoberstorm/rubycap
   commands:
-    - curl -o /usr/bin/framgia-ci https://raw.githubusercontent.com/framgia/ci-report-tool/master/dist/framgia-ci && chmod +x /usr/bin/framgia-ci
-    - bundle install
-    - framgia-ci test
-    - framgia-ci report
-    - framgia-ci finish
+    - /bin/bash -c "source /etc/profile.d/rvm.sh"
+    - /bin/bash -c "bundle install"
+    - /bin/bash -c "RAILS_ENV=test rake db:create db:migrate"
+    - /bin/bash -c "framgia-ci run"
 cache:
   mount:
     - .git
