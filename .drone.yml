@@ -2,7 +2,15 @@ build:
   #image: framgia/ruby-workspace-ci
   image: octoberstorm/rubycap
   commands:
+    - sudo start redis
+    - sleep 20
+    - curl http://localhost:9200
     - /bin/bash -c "source /etc/profile.d/rvm.sh && bundle install && RAILS_ENV=test rake db:create db:migrate && framgia-ci run"
+compose:
+  redis:
+    image: redis:3.0.7
+  elasticsearch:
+    image: elasticsearch:2.4.2
 cache:
   mount:
     - .git
