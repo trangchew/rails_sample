@@ -2,7 +2,7 @@ project_type: ruby
 test:
   bundle-audit:
     enable: true
-    ignore: true
+    ignore: false
     command: bundle-audit --update | tee .framgia-ci-reports/bundle-audit.txt
   rspec:
     enable: true
