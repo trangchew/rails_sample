@@ -27,7 +27,8 @@ test:
   eslint:
     enable: true
     ignore: true
-    command: rake eslint:run_all --format=checkstyle --output-file=.framgia-ci-reports/eslint.xml app/
+    # command: rake eslint:run_all --format=checkstyle --output-file=.framgia-ci-reports/eslint.xml app/
+    command: rake eslint:run_all app/
   rails_best_practices:
     enable: true
     ignore: true
