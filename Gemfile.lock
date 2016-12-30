@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/octoberstorm/eslint-rails.git
-  revision: ab953d366c3420b3a5191cf0d040c073d79c3245
+  revision: 72d46d94d44dd17c552345852cd1da5b8cb6624d
   specs:
     eslint-rails (1.2.1)
       colorize
