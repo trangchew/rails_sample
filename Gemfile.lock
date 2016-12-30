@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/octoberstorm/eslint-rails.git
-  revision: fc9655366e47dfcc6c6b8536e4b8fa54be8193d9
+  revision: 946059684cbb497867f4014ee1b065048771a612
   specs:
     eslint-rails (1.2.1)
       colorize
@@ -86,6 +86,7 @@ GEM
       sexp_processor
     codeclimate-engine-rb (0.4.0)
       virtus (~> 1.0)
+    coderay (1.1.1)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     colorize (0.8.1)
@@ -115,6 +116,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -129,6 +131,10 @@ GEM
     parser (2.3.3.1)
       ast (~> 2.2)
     powerpack (0.1.1)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.6.5)
     rack-protection (1.5.3)
       rack
@@ -223,6 +229,7 @@ GEM
       simplecov
     simplecov-rcov (0.2.3)
       simplecov (>= 0.4.1)
+    slop (3.6.0)
     spring (2.0.0)
       activesupport (>= 4.2)
     sprockets (3.7.0)
@@ -276,6 +283,7 @@ DEPENDENCIES
   capistrano3-unicorn
   eslint-rails!
   jshint
+  pry
   rails (= 4.2.1)
   rails_best_practices
   reek
