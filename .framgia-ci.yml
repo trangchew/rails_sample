@@ -6,11 +6,11 @@ test:
     command: bundle-audit check --update | tee .framgia-ci-reports/bundle-audit.txt
   rspec:
     enable: true
-    ignore: true
+    ignore: false
     command: rspec --format html --out .framgia-ci-reports/rspec.html spec/
   brakeman:
     enable: true
-    ignore: true
+    ignore: false
     command: brakeman -o .framgia-ci-reports/brakeman.html -o .framgia-ci-reports/brakeman.json
   reek:
     enable: true
