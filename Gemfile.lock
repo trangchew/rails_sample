@@ -123,6 +123,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
+    mysql2 (0.3.21)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
@@ -283,6 +284,7 @@ DEPENDENCIES
   capistrano3-unicorn
   eslint-rails!
   jshint
+  mysql2 (~> 0.3.13)
   pry
   rails (= 4.2.1)
   rails_best_practices
