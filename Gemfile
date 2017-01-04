@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+gem 'mysql2', '~> 0.3.13'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -18,6 +19,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails'
+	gem 'pry'
 
   gem 'brakeman', require: false
   gem 'jshint'
@@ -26,7 +28,7 @@ group :development, :test do
   gem 'rubocop-checkstyle_formatter', require: false
   gem 'scss_lint', require: false
   gem 'scss_lint_reporter_checkstyle', require: false
-  gem 'eslint-rails'
+  gem 'eslint-rails', github: 'octoberstorm/eslint-rails'
   gem "rails_best_practices"
   gem 'reek'
 
@@ -53,3 +55,4 @@ gem 'capistrano-sidekiq'
 gem 'capistrano-bundler'
 gem 'capistrano3-unicorn'
 # gem 'capistrano-locally'
+#

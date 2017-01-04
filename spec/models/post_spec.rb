@@ -17,4 +17,10 @@ RSpec.describe Post, type: :model do
 
 		it { is_expected.to be_valid }
 	end
+
+  describe "test utf8" do
+    before { post.update_attributes title: "マーケティング"}
+
+    it { should be_valid }
+  end
 end

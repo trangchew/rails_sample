@@ -3,3 +3,4 @@ log/
 vendor/cache
 coverage
 reports
+.framgia-ci-reports

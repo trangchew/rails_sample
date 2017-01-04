@@ -3,10 +3,16 @@ build:
   image: octoberstorm/rubycap
   commands:
     - sudo start redis
-    - sleep 20
-    - curl http://localhost:9200
+    - cp config/database-ci.yml config/database.yml
     - /bin/bash -c "source /etc/profile.d/rvm.sh && bundle install && RAILS_ENV=test rake db:create db:migrate && framgia-ci run"
 compose:
+  database:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: ci_test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: root
   redis:
     image: redis:3.0.7
   elasticsearch:

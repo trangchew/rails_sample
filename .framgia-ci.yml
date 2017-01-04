@@ -2,15 +2,15 @@ project_type: ruby
 test:
   bundle-audit:
     enable: true
-    ignore: true
-    command: bundle-audit --update | tee .framgia-ci-reports/bundle-audit.txt
+    ignore: false
+    command: bundle-audit check --update | tee .framgia-ci-reports/bundle-audit.txt
   rspec:
     enable: true
-    ignore: true
+    ignore: false
     command: rspec --format html --out .framgia-ci-reports/rspec.html spec/
   brakeman:
     enable: true
-    ignore: true
+    ignore: false
     command: brakeman -o .framgia-ci-reports/brakeman.html -o .framgia-ci-reports/brakeman.json
   reek:
     enable: true
@@ -27,7 +27,8 @@ test:
   eslint:
     enable: true
     ignore: true
-    command: rake eslint:run_all --format=checkstyle --output-file=.framgia-ci-reports/eslint.xml app/
+    # command: rake eslint:run_all --format=checkstyle --output-file=.framgia-ci-reports/eslint.xml app/
+    command: rake eslint:run_all format=checkstyle target_file=.framgia-ci-reports/eslint.xml app/
   rails_best_practices:
     enable: true
     ignore: true
