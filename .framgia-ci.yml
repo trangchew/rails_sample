@@ -3,7 +3,7 @@ test:
   bundle-audit:
     enable: true
     ignore: false
-    command: bundle-audit check --update | tee .framgia-ci-reports/bundle-audit.txt
+    command: bundle-audit check --update > .framgia-ci-reports/bundle-audit.txt
   rspec:
     enable: true
     ignore: false
@@ -28,7 +28,7 @@ test:
     enable: true
     ignore: true
     # command: rake eslint:run_all --format=checkstyle --output-file=.framgia-ci-reports/eslint.xml app/
-    command: rake eslint:run_all format=checkstyle target_file=.framgia-ci-reports/eslint.xml app/
+    command: rake eslint:run_all format=checkstyle output_file=.framgia-ci-reports/eslint.xml app/
   rails_best_practices:
     enable: true
     ignore: true
