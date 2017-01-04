@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/octoberstorm/eslint-rails.git
-  revision: c1f70df6e5551ecbae1d9dd2cdf4681a3ea15fb9
+  revision: 71a40292e764d94f16a4174ea92b07824cdc0d34
   specs:
     eslint-rails (1.2.1)
       colorize
@@ -127,7 +127,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
-    nokogiri (1.7.0)
+    nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     parser (2.3.3.1)
       ast (~> 2.2)
