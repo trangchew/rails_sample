@@ -2,6 +2,7 @@ build:
   #image: framgia/ruby-workspace-ci
   #image: octoberstorm/rubycap
   image: octoberstorm/rails-base
+  pull: true
   commands:
     - sudo start redis
     - cp config/database-ci.yml config/database.yml
