@@ -7,6 +7,7 @@ gem 'mysql2', '~> 0.3.13'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'coffee-rails'
+gem 'uglifier'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

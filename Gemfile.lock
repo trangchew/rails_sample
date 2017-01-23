@@ -264,6 +264,8 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uglifier (3.0.4)
+      execjs (>= 0.3.0, < 3)
     unicode-display_width (1.1.2)
     unicorn (5.2.0)
       kgio (~> 2.6)
@@ -314,6 +316,7 @@ DEPENDENCIES
   simplecov-rcov
   spring
   turbolinks
+  uglifier
   unicorn
   unicorn-worker-killer
   web-console (~> 2.0)
