@@ -5,6 +5,12 @@ build:
     - sudo start redis
     - cp config/database-ci.yml config/database.yml
     - /bin/bash -c "source /etc/profile.d/rvm.sh && gem update eslint-rails && bundle install && RAILS_ENV=test rake db:create db:migrate && framgia-ci run"
+
+deploy:
+  heroku:
+    app: polar-anchorage-34648
+    force: true
+
 compose:
   database:
     image: mysql:5.7
