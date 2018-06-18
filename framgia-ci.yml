@@ -2,7 +2,7 @@ build:
   phpunit:
     image: octoberstorm/rails-base:latest
     commands:
-    - framgia-ci run --local
+    - echo dangminhtruongg
 services:
   mysql:
     image: mysql:5.7
