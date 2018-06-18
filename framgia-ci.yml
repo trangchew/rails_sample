@@ -1,19 +1,5 @@
 build:
   phpunit:
     image: octoberstorm/rails-base:latest
-  commands:
-    -framgia-ci run
-services:
-  mysql:
-    image: mysql:5.7
-    environment:
-      MYSQL_DATABASE: ci_test
-      MYSQL_USER: test
-      MYSQL_PASSWORD: test
-      MYSQL_ROOT_PASSWORD: root
-deploy:
-  docker:
-    username: octocat
-    password: password
-    email: dangminhtruong@gmail.com
-    repo: dangminhtruong/Havana_Laravel
+    commands:
+    - framgia-ci run --local
