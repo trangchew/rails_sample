@@ -2,11 +2,7 @@ build:
   phpunit:
     image: octoberstorm/rails-base:latest
   commands:
-    - start redis
-    - sleep 15
-    - cp config/database-ci.yml config/database.yml
-    - /bin/bash -c "source /etc/profile.d/rvm.sh && bundle install && RAILS_ENV=test rake db:create db:migrate && framgia-ci run"
-
+    -framgia-ci run
 services:
   mysql:
     image: mysql:5.7
@@ -15,10 +11,3 @@ services:
       MYSQL_USER: test
       MYSQL_PASSWORD: test
       MYSQL_ROOT_PASSWORD: root
-  redis:
-    image: redis:3.0.7
-  elasticsearch:
-    image: elasticsearch:2.4.2
-cache:
-  mount:
-    - .git
