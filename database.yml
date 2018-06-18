@@ -14,7 +14,7 @@ development: &development
 
 development_reader:
   <<: *development
-  host: localhost
+  host: mysql
 
 test: &test
   <<: *default
