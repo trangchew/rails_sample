@@ -1,0 +1,32 @@
+brakeman:
+  comment: true
+  exit_code: 32512
+  ignore: true
+bundle-audit:
+  comment: true
+  exit_code: 32512
+  ignore: true
+eslint:
+  comment: true
+  exit_code: 32512
+  ignore: true
+rails_best_practices:
+  comment: true
+  exit_code: 32512
+  ignore: true
+reek:
+  comment: true
+  exit_code: 32512
+  ignore: true
+rspec:
+  comment: true
+  exit_code: 32512
+  ignore: true
+rubocop:
+  comment: true
+  exit_code: 32512
+  ignore: true
+scss-lint:
+  comment: true
+  exit_code: 32512
+  ignore: true

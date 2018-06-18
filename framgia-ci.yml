@@ -1,6 +1,6 @@
 build:
   phpunit:
-    image: framgia/ruby-workspace-ci
+    image: dangminhtruong/rails_base_with_ci
     commands:
     - cp config/database-ci.yml config/database.yml
     - bundle install

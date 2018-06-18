@@ -32,4 +32,3 @@ test:
     enable: true
     ignore: true
     command: rails_best_practices --format html --output-file .framgia-ci-reports/rails_best_practices.html app/
-
