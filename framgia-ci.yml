@@ -1,6 +1,6 @@
 build:
   phpunit:
-    image: octoberstorm/rails-base:latest
+    image: framgia/ruby-workspace-ci
     commands:
     - cp config/database-ci.yml config/database.yml
     - bundle install
