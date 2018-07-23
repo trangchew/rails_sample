@@ -11,6 +11,7 @@ build:
     - gem install rspec
     - gem install scss_lint
     - gem install brakeman
+    - gem install simplecov
     - RAILS_ENV=test rake db:create db:migrate
     - framgia-ci run
     - ls .framgia-ci-reports/reports
