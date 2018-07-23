@@ -4,16 +4,15 @@ build:
     commands:
     - cp config/database-ci.yml config/database.yml
     - gem update bundler
-    - bundle --version
-    - gem install rake
-    - bundle exec rake
     - bundle install
+    - gem install rake
     - gem install bundle-audit
     - gem install rails_best_practices
     - gem install rspec
     - gem install scss_lint
     - RAILS_ENV=test rake db:create db:migrate
     - framgia-ci run
+    - ls .framgia-ci-reports/
 services:
   mysql:
     image: mysql:5.7
