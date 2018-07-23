@@ -10,9 +10,10 @@ build:
     - gem install rails_best_practices
     - gem install rspec
     - gem install scss_lint
+    - gem install brakeman
     - RAILS_ENV=test rake db:create db:migrate
     - framgia-ci run
-    - ls .framgia-ci-reports/
+    - ls .framgia-ci-reports/reports
 services:
   mysql:
     image: mysql:5.7
