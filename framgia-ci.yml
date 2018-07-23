@@ -1,6 +1,6 @@
 build:
   phpunit:
-    image: dangminhtruong/rails_base_with_ci
+    image: dangminhtruong/rails_base_with_ci:latest
     commands:
     - cp config/database-ci.yml config/database.yml
     - bundle install
