@@ -5,6 +5,7 @@ build:
     - cp config/database-ci.yml config/database.yml
     - gem update bundler
     - bundle --version
+    - gem install rake
     - bundle exec rake
     - bundle install
     - gem install bundle-audit
