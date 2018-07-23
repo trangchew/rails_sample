@@ -3,6 +3,9 @@ build:
     image: dangminhtruong/rails_base_with_ci:latest
     commands:
     - cp config/database-ci.yml config/database.yml
+    - gem update bundler
+    - bundle --version
+    - bundle exec rake
     - bundle install
     - gem install bundle-audit
     - gem install rails_best_practices
