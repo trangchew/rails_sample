@@ -48,10 +48,6 @@ test:
     enable: true
     ignore: true
     command: scss-lint --require=scss_lint_reporter_checkstyle --format=Checkstyle --out=.framgia-ci-reports/scss-lint.xml app/assets/stylesheets/
-  eslint:
-    enable: true
-    ignore: true
-    command: eslint --format=checkstyle --output-file=.framgia-ci-reports/eslint.xml app/
   rails_best_practices:
     enable: true
     ignore: true
