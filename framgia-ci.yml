@@ -19,7 +19,7 @@ test:
   bundle-audit:
     enable: true
     ignore: true
-    command: echo '' | bundle-audit check --update > .framgia-ci-reports/bundle-audit.txt
+    command: bundle-audit check --update > .framgia-ci-reports/bundle-audit.txt
   rspec:
     enable: true
     ignore: true
@@ -39,7 +39,7 @@ test:
   scss-lint:
     enable: true
     ignore: true
-    command: echo '' | scss-lint --require=scss_lint_reporter_checkstyle --format=Checkstyle --out=.framgia-ci-reports/scss-lint.xml app/assets/stylesheets/
+    command: scss-lint --require=scss_lint_reporter_checkstyle --format=Checkstyle --out=.framgia-ci-reports/scss-lint.xml app/assets/stylesheets/
   rails_best_practices:
     enable: true
     ignore: true
