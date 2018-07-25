@@ -23,7 +23,7 @@ test:
   rspec:
     enable: true
     ignore: true
-    command: echo '' | rspec --format html --out .framgia-ci-reports/rspec.html app
+    command: rspec --format html --out .framgia-ci-reports/rspec.html app
   brakeman:
     enable: true
     ignore: true
@@ -31,7 +31,7 @@ test:
   reek:
     enable: true
     ignore: true
-    command: reek --format html > .framgia-ci-reports/reek.html
+    command: echo '' | reek --format html > .framgia-ci-reports/reek.html
   rubocop:
     enable: true
     ignore: true
