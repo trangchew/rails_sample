@@ -1,20 +1,9 @@
 build:
   phpunit:
-    image: dangminhtruong/rails_base_with_ci:latest
+    image: daothaison/ruby-workspace:latest
     commands:
-    - cp config/database-ci.yml config/database.yml
-    - gem update bundler
     - bundle install
-    - gem install rake
-    - gem install bundle-audit
-    - gem install rails_best_practices
-    - gem install rspec
-    - gem install scss_lint
-    - gem install brakeman
-    - gem install simplecov
-    - RAILS_ENV=test rake db:create db:migrate
     - framgia-ci run
-    - ls .framgia-ci-reports/reports
 services:
   mysql:
     image: mysql:5.7
