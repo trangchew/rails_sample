@@ -31,7 +31,7 @@ test:
   reek:
     enable: true
     ignore: true
-    command: echo '' | reek --format html > .framgia-ci-reports/reek.html
+    command: reek --format html > .framgia-ci-reports/reek.html
   rubocop:
     enable: true
     ignore: true
