@@ -2,7 +2,6 @@ build:
   phpunit:
     image: daothaison/ruby-workspace:latest
     commands:
-    - cp config/database-ci.yml config/database.yml
     - gem update bundler
     - bundle install
     - framgia-ci run
